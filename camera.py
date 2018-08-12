@@ -74,7 +74,7 @@ try:
     CAMERA_ROTATION = CONFIG['CAMERA_ROTATION']
     CAMERA_HFLIP = CONFIG['CAMERA_HFLIP']
     DEBOUNCE_TIME = CONFIG['DEBOUNCE_TIME']
-    TESTMODE_AUTOPRESS_BUTTON = CONFIG['TESTMODE_AUTOPRESS_BUTTON']
+    TESTMODE_AUTOPRESS_BUTTON = CONraspberryFIG['TESTMODE_AUTOPRESS_BUTTON']
     SAVE_RAW_IMAGES_FOLDER = CONFIG['SAVE_RAW_IMAGES_FOLDER']
 
 except KeyError as exc:
@@ -214,7 +214,7 @@ def taking_photo(filename_prefix):
     print('Photo saved: ' + filename)
 
     print('All done!')
-    finished_image = REAL_PATH + '/assets/all_done_delayed_upload.png'
+    finished_image = REAL_PATH + '/assets/success_1.png'
     overlay_image(finished_image, 2)
 
 def main():
