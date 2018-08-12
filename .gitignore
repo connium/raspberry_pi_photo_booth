@@ -19,9 +19,5 @@ venv.bak/
 ###################
 # Project-specific:
 ###################
-camera-config.yaml
-photo-processor-config.yaml
+# camera-config.yaml
 photos/*.jpg
-photos-IN/
-photos-PROCESSING/
-photos-DONE/
