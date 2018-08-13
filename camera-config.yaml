@@ -7,8 +7,8 @@
 "DEBOUNCE_TIME"     : 0.05 # Min duration (seconds) button is required to be "pressed in" for.
 
 # Take photos at this resolution:
-"PHOTO_W"           : 1920
-"PHOTO_H"           : 1152
+"PHOTO_W"           : 3280 # 1920
+"PHOTO_H"           : 1968 # 1152
 #Note:
 # - The max resolution for PiCamera v2, is: 3280x2464 , assuming you are running the latest firmware.
 # - To upgrade your firmware, please run:
@@ -19,8 +19,8 @@
 "SCREEN_H"          : 480
 
 # Camera setup
-"CAMERA_ROTATION"   : 270 # Rotation of the camera
-"CAMERA_HFLIP"      : True # When preparing for photos, the preview will be flipped horizontally.
+"CAMERA_ROTATION"   : 0 # Rotation of the camera
+"CAMERA_HFLIP"      : False # When preparing for photos, the preview will be flipped horizontally.
 
 # Primary folder to save images to (required):
 "SAVE_RAW_IMAGES_FOLDER" : "photos"

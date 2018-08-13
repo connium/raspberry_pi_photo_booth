@@ -15,6 +15,7 @@ __version__ = '2.1'
 #Standard imports
 from time import sleep
 from shutil import copy2
+from random import randint
 import sys
 import datetime
 import os
@@ -104,6 +105,8 @@ CAMERA.rotation = CAMERA_ROTATION
 CAMERA.annotate_text_size = 80
 CAMERA.resolution = (PHOTO_W, PHOTO_H)
 CAMERA.hflip = CAMERA_HFLIP
+
+CAMERA.shutter_speed = 16667
 
 ########################
 ### Helper Functions ###
@@ -210,12 +213,15 @@ def taking_photo(filename_prefix):
 
     #Take still
     CAMERA.annotate_text = ''
-    CAMERA.capture(filename)
+    CAMERA.capture(filename, format="jpeg", quality=100)
     print('Photo saved: ' + filename)
 
     print('All done!')
-    finished_image = REAL_PATH + '/assets/success_1.png'
-    overlay_image(finished_image, 2)
+
+    image_number = randint(1, 5)
+    #finished_image = REAL_PATH + '/assets/success_1.png'
+    finished_image = REAL_PATH + '/assets/success_' + image_number + '.png'
+    overlay_image(finished_image, 1.5)
 
 def main():
     """
@@ -237,8 +243,8 @@ def main():
     CAMERA.start_preview(resolution=(SCREEN_W, SCREEN_H))
 
     #Display intro screen
-    intro_image_1 = REAL_PATH + '/assets/intro_1.png'
-    overlay_image(intro_image_1, 3)
+    intro_image_1 = REAL_PATH + '/assets/intro.png'
+    overlay_image(intro_image_1, 5)
 
     #Wait for someone to push the button
 
