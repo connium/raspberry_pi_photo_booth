@@ -217,12 +217,8 @@ def taking_photo(filename_prefix):
     print('Photo saved: ' + filename)
 
     print('All done!')
-
-    finished_image = REAL_PATH + '/assets/success_1.png'
     image_number = randint(1, 5)
-    print(image_number)
-    print(REAL_PATH + '/assets/success_' + image_number + '.png')
-    #finished_image = REAL_PATH + '/assets/success_' + image_number + '.png'
+    finished_image = REAL_PATH + '/assets/success_' + str(image_number) + '.png'
     overlay_image(finished_image, 1.5)
 
 def main():
